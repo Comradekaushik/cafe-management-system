@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe-Management-System</title>
+    <style>
+        .main-body {
+            background-color: rgb(14, 22, 33);
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-top: 80px;
+        }
+
+        .header {
+            display: grid;
+            background-color: lightpink;
+            position: fixed;
+            grid-template-columns: 300px 600px 200px;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+        }
+
+        .div-1-header {
+            background-color: lightpink;
+        }
+
+        .header-logo {
+            width: 200px;
+        }
+
+        .div-2-header {
+            background-color: lightpink;
+            display: grid;
+            grid-template-columns: 120px 120px 120px 120px;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .menu-header {
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            padding-left: 30px;
+           
+        }
+
+        .menu-header:hover {
+            background-color: black;
+            color: white;
+            border-color: black;
+            transition: background-color 0.5s;
+        }
+
+        .sales-header {
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            padding-left: 30px;
+            
+        }
+
+        .sales-header:hover {
+            background-color: black;
+            color: white;
+            border-color: black;
+            transition: background-color 0.5s;
+        }
+
+        .staffs-header {
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            padding-left: 30px;
+        }
+
+        .staffs-header:hover {
+            background-color: black;
+            color: white;
+            border-color: black;
+            transition: background-color 0.5s;
+        }
+
+        .inventory-header {
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            padding-left: 15px;
+        }
+
+        .inventory-header:hover {
+            background-color: black;
+            color: white;
+            border-color: black;
+            transition: background-color 0.5s;
+            
+        }
+
+        .div-3-header {
+            background-color: lightpink;
+            display: grid;
+            align-items: center;
+            padding: 22px;
+            
+
+        }
+
+        .login-button {
+            width: 140px;
+            height: 35px;
+            background-color: red;
+            color: white;
+            border-style: none;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-button:hover {
+
+            background-color: black;
+            transition: background-color 0.75s;
+        }
+
+        .section-cafe-logo {
+            background-color: rgb(251, 240, 221);
+            padding-left: 375px;
+
+        }
+
+        .main-cafe-logo {
+            width: 400px;
+            height: 400px;
+
+            object-fit: cover;
+        }
+        .management-grid{
+            display: grid;
+            grid-template-columns: 260px 260px 260px;
+            padding-left: 45px;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            padding-right: 45px;
+            
+            
+        }
+        .management-grid-column-1-row-1{
+            border-style: solid;
+            border-color: blue;
+            background-color: aliceblue;
+            border-radius: 8px;
+        }
+        .management-grid-column-2-row-1{
+            border-style: solid;
+            border-color: blue;
+            background-color: aliceblue;
+            border-radius: 8px;
+
+        }
+        .management-grid-column-3-row-1{
+            border-style: solid;
+            border-color: blue;
+            background-color: aliceblue;
+            border-radius: 8px;
+
+        }
+        .management-grid-column-1-row-2{
+            border-style: solid;
+            border-color: blue;
+            background-color: aliceblue;
+            border-radius: 8px;
+
+        }
+        .management-grid-column-2-row-2{
+            border-style: solid;
+            border-color: blue;
+            background-color: aliceblue;
+            border-radius: 8px;
+
+        }
+        .management-grid-column-3-row-2{
+            border-style: solid;
+            border-color: blue;
+            background-color: aliceblue;
+            border-radius: 8px;
+
+        }
+        
+        .image-management-grid-1-1{
+            width:253px;
+            border-style: solid;
+            border-radius: 8px;
+
+        }
+        .grid-1-para-1{
+            width:250px;
+
+        }
+        .grid-1-para-2{
+            width:250px;
+            
+
+        }
+        .grid-1-para-3{
+            width:250px;
+
+        }
+        .manage-1-button{
+            width:230px;
+            margin-left: 13px;
+            margin-bottom: 4px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            border-style: none;
+            font-weight: 700;
+            border-radius: 4px;
+            font-size: 16px;
+
+        }
+        .manage-1-button:hover{
+            background-color: black;
+            transition: background-color 0.75s;
+
+        }
+        .footer{
+            margin-top: 60px;
+            height:200px;
+            background-color: black;
+            color: white;
+        }
+        .ght{
+            margin-left: 450px;
+            margin-top: 100px;
+            font-size: 40px;
+            font-family:fantasy;
+        }
+    </style>
+</head>
+
+<body class="main-body">
+    <div class="header">
+        <div class="div-1-header">
+            <img class="header-logo" src="/Images/1600w-YASJJho2Kzw.png">
+
+        </div>
+        <div class="div-2-header">
+            
+
+            <div class="menu-header">Menu</div>
+
+                <div class="sales-header">Sales</div>
+           
+                <div class="staffs-header">Staffs</div>
+            
+                <div class="inventory-header">Inventory</div>
+            
+</div>
+            <div class="div-3-header">
+                <button class="login-button">Login</button>
+
+            </div>
+
+
+
+        </div>
+        <section class="section-cafe-logo">
+            <img class="main-cafe-logo" src="/Images/1600w-YASJJho2Kzw.webp">
+
+        </section>
+        <br>
+        <div class="management-grid">
+            <div class="management-grid-column-1-row-1">
+                
+                <img src="/Images/staffmanagement6.jpg" class="image-management-grid-1-1">
+                
+                <p class="grid-1-para-1">&#10003 Accounts of the presence and workload of the staffs</p>
+                <p class="grid-1-para-2">&#10003 Also storing the ratings of the staff</p>
+                <p class="grid-1-para-3">&#10003 Including the data of Independent Delivery Partners</p>
+                
+                <button class="manage-1-button">Manage</button>
+                
+
+            </div>
+            <div class="management-grid-column-2-row-1">
+                <img src="/Images/staffmanagement6.jpg" class="image-management-grid-1-1">
+                
+                <p class="grid-1-para-1">&#10003 Accounts of the presence and workload of the staffs</p>
+                <p class="grid-1-para-2">&#10003 Also storing the ratings of the staff</p>
+                <p class="grid-1-para-3">&#10003 Including the data of Independent Delivery Partners</p>
+                
+                <button class="manage-1-button">Manage</button>
+                
+                
+
+
+            </div>
+            <div class="management-grid-column-3-row-1">
+                <img src="/Images/staffmanagement6.jpg" class="image-management-grid-1-1">
+                <p class="grid-1-para-1">&#10003 Accounts of the presence and workload of the staffs</p>
+                <p class="grid-1-para-2">&#10003 Also storing the ratings of the staff</p>
+                <p class="grid-1-para-3">&#10003 Including the data of Independent Delivery Partners</p>
+                <button class="manage-1-button">Manage</button>
+
+
+            </div>
+
+        </div>
+
+        <div class="management-grid">
+            <div class="management-grid-column-1-row-2">
+                <img src="/Images/staffmanagement6.jpg" class="image-management-grid-1-1">
+                <p class="grid-1-para-1">&#10003 Accounts of the presence and workload of the staffs</p>
+                <p class="grid-1-para-2">&#10003 Also storing the ratings of the staff</p>
+                <p class="grid-1-para-3">&#10003 Including the data of Independent Delivery Partners</p>
+                <button class="manage-1-button">Manage</button>
+
+            </div>
+            <div class="management-grid-column-2-row-2">
+                <img src="/Images/staffmanagement6.jpg" class="image-management-grid-1-1">
+                <p class="grid-1-para-1">&#10003 Accounts of the presence and workload of the staffs</p>
+                <p class="grid-1-para-2">&#10003 Also storing the ratings of the staff</p>
+                <p class="grid-1-para-3">&#10003 Including the data of Independent Delivery Partners</p>
+                <button class="manage-1-button">Manage</button>
+
+
+            </div>
+            <div class="management-grid-column-3-row-2">
+                <img src="/Images/staffmanagement6.jpg" class="image-management-grid-1-1">
+                <p class="grid-1-para-1">&#10003 Accounts of the presence and workload of the staffs</p>
+                <p class="grid-1-para-2">&#10003 Also storing the ratings of the staff</p>
+                <p class="grid-1-para-3">&#10003 Including the data of Independent Delivery Partners</p>
+                <button class="manage-1-button">Manage</button>
+
+
+            </div>
+
+        </div>
+
+    <div class="footer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem delectus aspernatur sed eligendi corporis, cupiditate quidem ipsum accusamus molestiae, dignissimos quisquam tempore iste tempora dolores architecto nobis nemo aliquam incidunt.</p>
+
+        <h1 class="ght">&#169 Made using cgen</h1>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
