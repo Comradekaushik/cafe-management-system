@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <title>Document-1</title>
+
+    <style>
+        .main-body{
+            padding-top: 85px;
+            
+        }
+        .managing-tab{
+            display: grid;
+            background-color: lightpink;
+            position: fixed;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+
+        }
+
+        .div-1-header {
+            background-color: lightpink;
+        }
+
+        .header-logo {
+            width: 260px;
+        }
+        .work-calendar{
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            margin-top:20px;
+            margin-left:80px;
+            background-color: lightpink;
+            cursor: pointer;
+            /* padding-left: 30px; */
+        }
+        .work-calendar:hover{
+            background-color:black;
+            color: white;
+            border-color: black;
+            transition: background-color 0.5s;
+        }
+
+        .notice-button{
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            margin-top:20px;
+            margin-left:40px;
+            background-color: lightpink;
+            cursor: pointer;
+            /* padding-left: 30px; */
+        }
+        .notice-button:hover{
+            background-color:black;
+            color: white;
+            border-color: black;
+            transition: background-color 0.5s;
+        }
+        .workhours-managing-calculator{
+            width:400px;
+            height:410px;
+            border-style: solid;
+            border-radius: 6px;
+            border-color:red;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(14, 22, 33);
+            
+            
+        }
+        .workhours-managing-calculator-heading{
+            border-bottom-style: solid;
+            
+            border-bottom-width: 3px;
+            background-color: lightpink;
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            color: black;
+            height:30px;
+            font-size:22px;
+            padding-left: 30%;
+            font-family: 'Roboto', sans-serif;
+            
+
+
+        }
+        .staff-name-input{
+            /* padding: 8.5%; */
+            padding-right: 8.5%;
+            padding-left: 8.5%;
+        }
+        .enter-staff-name{
+            margin-top: 10px;
+            border-style:solid;
+            border-color: red;
+            border-radius: 4px;
+            width:325px;
+            height: 30px;
+            font-size: 20px;
+            
+
+        }
+
+        .working-days-input{
+            margin-top: 20px;
+            padding-right: 8.5%;
+            padding-left: 8.5%;
+        }
+        .enter-working-days-number{
+
+            /* margin-top: 10px; */
+            border-style:solid;
+            border-color: red;
+            border-radius: 4px;
+            width:325px;
+            height: 30px;
+            font-size: 20px;
+
+        }
+
+        .paid-leaves-input{
+            margin-top: 20px;
+            padding-right: 8.5%;
+            padding-left: 8.5%;
+        }
+        .enter-paid-leaves-number{
+
+            /* margin-top: 10px; */
+            border-style:solid;
+            border-color: red;
+            border-radius: 4px;
+            width:325px;
+            height: 30px;
+            font-size: 20px;
+
+        }
+        .salary-calculate-button{
+            font-size: 22px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 3px;
+            margin-top:20px;
+            margin-left:160px;
+            background-color: lightpink;
+            cursor: pointer;
+        }
+        .salary-calculate-button:hover{
+            background-color:black;
+            color: white;
+            border-color: white;
+            transition: background-color 0.5s;
+        }
+        .total-amount-to-be-paid{
+            width:75%;
+            border-style: solid;
+            border-radius:4px;
+            border-color: red;
+            padding-right: 5%;
+            padding-left:5% ;
+            margin-left: 30px;
+            margin-top: 15px;
+
+        }
+        .total-amount-to-be-paid-textbox{
+            color: white;
+            font-size: 22px;
+        }
+
+    </style>
+</head>
+<body class="main-body">
+
+    <div class="managing-tab">
+
+        <div class="div-1-header">
+            <img class="header-logo" src="/Images/1600w-YASJJho2Kzw.png">
+
+        </div>
+       
+
+
+        <div><button class="work-calendar">Work Calendar</button></div>
+
+
+        <div><button class="work-calendar" onclick="location.href='index2.html'">Sales</button></div>
+
+
+
+
+        <div><button class="notice-button">Notices</button></div>
+
+
+
+    </div>
+    <div class="workhours-managing-calculator">
+        <div class="workhours-managing-calculator-heading">Salary Calculator</div>
+
+        <div class="staff-name-input"><input class="enter-staff-name"placeholder="Enter staff's name"></div>
+
+        <div class="working-days-input"><input class="enter-working-days-number"placeholder="No. of working days {Rs 1000/day}"></div>
+
+
+        <div class="paid-leaves-input"><input class="enter-paid-leaves-number"placeholder="No. of paid leaves {Rs 800/day}"></div>
+
+        <div class="salary-calculate-button-container"><button class="salary-calculate-button" onclick="calculateSalary();">Calculate</button></div>
+
+        <div class="total-amount-to-be-paid"><p class="total-amount-to-be-paid-textbox"></p></div>
+
+
+
+    </div>
+    
+
+
+    <script>
+        function calculateSalary(){
+            let nameInput = document.querySelector(".enter-staff-name");
+            let workingDaysInput = document.querySelector(".enter-working-days-number");
+            let paidLeavesInput = document.querySelector(".enter-paid-leaves-number");
+            let staffName = nameInput.value;
+            let totalWorkSalary = Number(workingDaysInput.value) ;
+            let totalLeaveSalary = Number(paidLeavesInput.value) ;
+            let SalaryTotal = totalWorkSalary*1000 + totalLeaveSalary*750 ;
+            document.querySelector(".total-amount-to-be-paid-textbox").innerHTML = `Total Payment to be done to Mr. ${staffName}  is Rs ${SalaryTotal} only `;
+
+        }
+    </script>
+    
+</body>
+</html>
