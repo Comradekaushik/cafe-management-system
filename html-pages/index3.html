@@ -1,12 +1,1177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main-body {
+
+            /* padding-top: 0px;
+            padding-right: 0px; */
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: rgb(217, 7, 7);
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: red;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a31919;
+        }
+
+        .header {
+            width: 98%;
+            background-color: rgb(25, 25, 25);
+            color: white;
+            padding-left: 2%;
+            padding-bottom: 10px;
+
+
+        }
+
+        .header-text {
+            background-color: rgb(25, 25, 25);
+            color: white;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: calc(10vh);
+            width: 100%;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            width: 100%;
+
+        }
+
+        .left-side-div {
+            background-color: rgb(25,25,25);
+            border-style: solid;
+            border-color: black;
+            border-width: 1.5px;
+            border-radius: 10px;
+            border-top-right-radius: 0px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            padding-top: 3%;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            color: white;
+
+            height: calc(87vh);
+        }
+
+        .container-1a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            cursor: pointer;
+
+        }
+
+        .image-container-1a {
+            width: 100%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .side-content-1a-title {
+            margin-left: 2%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 22px;
+        }
+        .item-name-1{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-1{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-1{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-1{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-1{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-1{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-1{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-2a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-2{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-2{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-2{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-2{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-2{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-2{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-2{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-3a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-3{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-3{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-3{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-3{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-3{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-3{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-3{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-4a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-4{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-4{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-4{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-4{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-4{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-4{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-4{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-5a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-5{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-5{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-5{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-5{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-5{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-5{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-5{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-6a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-6{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-6{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-6{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-6{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-6{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-6{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-6{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+
+        .container-7a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-7{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-7{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-7{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-7{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-7{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-7{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-7{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-8a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-8{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-8{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-8{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-8{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-8{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-8{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-8{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-9a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-9{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-9{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-9{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-9{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-9{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-9{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-9{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+        .container-10a {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 6px;
+            margin-top: 5%;
+        }
+
+        .item-name-10{
+            font-size:30px;
+            color:red;
+        }
+
+        .item-price-10{
+            font-size: 22px;
+            color: blue;
+        }
+
+        .minus-one-button-10{
+            margin-top: 10px;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            border-bottom-color: white;
+        }
+
+        .add-to-cart-button-10{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 200px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+
+        }
+
+        .plus-one-button-10{
+            margin-left: 5px;
+            margin-bottom: 10px;
+            height: 35px;
+            width: 50px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: red;
+            color: white;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+
+        .total-quantity-of-the-item-para-10{
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 10px;
+
+            
+
+        }
+
+        .total-quantity-of-the-item-10{
+
+            display: inline-block;
+            border-style: solid;
+            margin-left: 10px;
+            padding-left: 50px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width:50px;
+            border-radius: 6px;
+            font-size: 25px;
+           
+
+        }
+
+
+
+        .right-side-div {
+            background-color: lightblue;
+            height: calc(87vh);
+            margin-right: 0px;
+            overflow-y: scroll;
+            padding-top: 2.5%;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            padding-bottom: 5%;
+            font-size: 24px;
+            border-style: solid;
+            border-color: black;
+            border-width: 1.5px;
+            border-radius: 10px;
+            line-height: 1.6;
+            user-select: none;
+
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="main-body">
+    <div class="header">
+        <p class="header-text">Cart</p>
+    </div>
+    <div class="main-container">
+        <div class="left-side-div">
+
+            <!-- onclick="myFunction()" -->
+
+            <div class="container-1a" ><img class="image-container-1a"
+                    src="/Images/176-hersheys-brownie-cake.avif">
+                <p class="side-content-1a-title"><span class="item-name-1">Hersheys Brownie Cake</span><br><span class="item-price-1">Rs. 399/-</span></p>
+                <button class="minus-one-button-1">-1</button><button class="add-to-cart-button-1">Add to cart</button>
+                <button class="plus-one-button-1">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-1">Total Quantity: </p><p class="total-quantity-of-the-item-1">5</p> 
+            </div>
+
+            <div class="container-2a"><img class="image-container-1a"
+                    src="/Images/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.jpg">
+                    <p class="side-content-1a-title"><span class="item-name-2">Hot Cofee</span><br><span class="item-price-2">Rs. 399/-</span></p>
+                <button class="minus-one-button-2">-1</button><button class="add-to-cart-button-2">Add to cart</button>
+                <button class="plus-one-button-2">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-2">Total Quantity: </p><p class="total-quantity-of-the-item-2">5</p>
+                
+            </div>
+
+            <div class="container-3a"><img class="image-container-1a" src="/Images/Butterscotch.jpg">
+                <p class="side-content-1a-title"><span class="item-name-3">Butterscotch Icecream</span><br><span class="item-price-3">Rs. 399/-</span></p>
+                <button class="minus-one-button-3">-1</button><button class="add-to-cart-button-3">Add to cart</button>
+                <button class="plus-one-button-3">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-3">Total Quantity: </p><p class="total-quantity-of-the-item-3">5</p>
+            </div>
+
+            <div class="container-4a"><img class="image-container-1a" src="/Images/burger-fries.webp">
+                <p class="side-content-1a-title"><span class="item-name-4">Jumbo burger with fries</span><br><span class="item-price-4">Rs. 399/-</span></p>
+                <button class="minus-one-button-4">-1</button><button class="add-to-cart-button-4">Add to cart</button>
+                <button class="plus-one-button-4">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-4">Total Quantity: </p><p class="total-quantity-of-the-item-4">5</p>
+            </div>
+
+            <div class="container-5a"><img class="image-container-1a" src="/Images/checkerboard-1.jpg">
+                <p class="side-content-1a-title"><span class="item-name-5">Vanila Checkerboard Cake</span><br><span class="item-price-5">Rs. 399/-</span></p>
+                <button class="minus-one-button-5">-1</button><button class="add-to-cart-button-5">Add to cart</button>
+                <button class="plus-one-button-5">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-5">Total Quantity: </p><p class="total-quantity-of-the-item-5">5</p>
+            </div>
+
+            <div class="container-6a"><img class="image-container-1a" src="/Images/cold-soda-tastes-better.webp">
+                <p class="side-content-1a-title"><span class="item-name-6">Soda</span><br><span class="item-price-6">Rs. 399/-</span></p>
+                <button class="minus-one-button-6">-1</button><button class="add-to-cart-button-6">Add to cart</button>
+                <button class="plus-one-button-6">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-6">Total Quantity: </p><p class="total-quantity-of-the-item-6">5</p>
+            </div>
+
+            <div class="container-7a"><img class="image-container-1a" src="/Images/c870x524.jpg">
+                <p class="side-content-1a-title"><span class="item-name-7">Garlic Pizza with coke</span><br><span class="item-price-7">Rs. 399/-</span></p>
+                <button class="minus-one-button-7">-1</button><button class="add-to-cart-button-7">Add to cart</button>
+                <button class="plus-one-button-7">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-7">Total Quantity: </p><p class="total-quantity-of-the-item-7">5</p>
+            </div>
+
+            <div class="container-8a"><img class="image-container-1a" src="/Images/tea.jpg">
+                <p class="side-content-1a-title"><span class="item-name-8">Green Tea</span><br><span class="item-price-8">Rs. 399/-</span></p>
+                <button class="minus-one-button-8">-1</button><button class="add-to-cart-button-8">Add to cart</button>
+                <button class="plus-one-button-8">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-8">Total Quantity: </p><p class="total-quantity-of-the-item-8">5</p>
+            </div>
+
+            <div class="container-9a"><img class="image-container-1a" src="/Images/fresh-made-lemonade.jpg.webp">
+                <p class="side-content-1a-title"><span class="item-name-9">Lemonade</span><br><span class="item-price-9">Rs. 399/-</span></p>
+                <button class="minus-one-button-9">-1</button><button class="add-to-cart-button-9">Add to cart</button>
+                <button class="plus-one-button-9">+1</button>
+                <br>
+                <p class="total-quantity-of-the-item-para-9">Total Quantity: </p><p class="total-quantity-of-the-item-9">5</p>
+            </div>
+
+            <div class="container-10a"><img class="image-container-1a"
+                    src="/Images/2a612714-ee3e-4198-89fd-3f80215c0ef6.jpg">
+                    <p class="side-content-1a-title"><span class="item-name-10">Vanila Milkshake</span><br><span class="item-price-10">Rs. 399/-</span></p>
+                    <button class="minus-one-button-10">-1</button><button class="add-to-cart-button-10">Add to cart</button>
+                    <button class="plus-one-button-10">+1</button>
+                    <br>
+                    <p class="total-quantity-of-the-item-para-10">Total Quantity: </p><p class="total-quantity-of-the-item-10">5</p>
+            </div>
+
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+
+
+
+            <div class="container-last">
+                <p>&#169wolves</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="right-side-div">
+            
+            
+
+            <br><br>
+
+            <h3>&#169wolves</h3>
+        </div>
+    </div>
+
+
+        <script>
+            function myFunction() {
+                location.href = "https://www.w3schools.com";
+            }
+        </script>
+
 </body>
+
 </html>
